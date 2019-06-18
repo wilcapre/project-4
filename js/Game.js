@@ -3,7 +3,7 @@
  * Game.js */
 class Game{ 
     missed = 0;
-    phrases = [];
+    phrases = ["I'm glad you can join"];
     activePhrase = null; 
     constructor (){
 
