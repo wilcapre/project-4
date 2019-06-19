@@ -8,8 +8,8 @@ const phrase = new Phrase('Life is like a box of chocolates');
 
 //Creates phrases for use in game
 
-const createPhrases= phrases ();
-createPhrases();
+//const createPhrases = phrases();
+//createPhrases();
 game.phrases.forEach((phrase, index) => {
     //console.log(`Phrase ${index} - phrase: ${phrase.phrase}`);
 

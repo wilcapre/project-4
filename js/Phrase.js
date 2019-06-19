@@ -11,6 +11,7 @@
     //this.showMatchedLetter = showMatchedLetter.bind();
     }
     //createPhrases();
+    //createPhrases = phrases();
     createPhrases() {};
 addPhraseToDisplay(){
     //const eachLetter = ('');

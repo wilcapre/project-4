@@ -5,15 +5,15 @@
  //Create game class
 
 class Game{ 
-    missed = 0;
-    phrases = [
+    this.missed = 0;
+    this.phrases = [
     "up", 
     "down",
     "left side",
     "right side",
     "center"
 ];
-    activePhrase = null; 
+    this.activePhrase = null; 
     constructor (){
         // this.board = new board();
         // this.players = this.creatPlayers();
@@ -29,5 +29,6 @@ class Game{
     };
 
     getRandomPhrase(){};
+
 }
 
