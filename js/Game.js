@@ -8,12 +8,12 @@ class Game {
     constructor() {
       this.missed = 0;
       this.phrases = [
-        "up", 
-        "down",
-        "left side",
-        "right side",
-        "center"
-        ];
+       new Phrase("up"),
+       new Phrase("down"),
+       new Phrase("left side"),
+       new Phrase("right side"),
+       new Phrase("center")
+      ];
      this.activePhrase = null; 
     }
 }
