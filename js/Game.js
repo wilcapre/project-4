@@ -4,31 +4,26 @@
 
  //Create game class
 
-class Game{ 
-    this.missed = 0;
-    this.phrases = [
-    "up", 
-    "down",
-    "left side",
-    "right side",
-    "center"
-];
-    this.activePhrase = null; 
-    constructor (){
-        // this.board = new board();
-        // this.players = this.creatPlayers();
-        // this.ready = false;
-
+class Game { 
+    constructor() {
+      this.missed = 0;
+      this.phrases = [
+        "up", 
+        "down",
+        "left side",
+        "right side",
+        "center"
+        ];
+     this.activePhrase = null; 
     }
-    // createPhrases(){};
-    startGame(){
-        // this.board.drawHTMLBoard();
-        // this.activePlayer.activeToken.drawHTMLtoken();
-        // this.ready = true;
-        
-    };
-
-    getRandomPhrase(){};
-
 }
+// createPhrases(){};
+    // startGame(){
+    //     // this.board.drawHTMLBoard();
+    //     // this.activePlayer.activeToken.drawHTMLtoken();
+    //     // this.ready = true;
+        
+    // };
+
+    // getRandomPhrase(){};
 
