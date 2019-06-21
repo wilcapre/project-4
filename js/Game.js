@@ -16,14 +16,16 @@ class Game {
       ];
      this.activePhrase = null; 
     }
+    //Iniatilize random phrases
+    //document.getElementById("phrase").addEventListner("click", function())
+    getRandomPhrase(){
+    const random = this.phrases[Math.floor(Math.random() * this.phrases.length)];
+    //const ranPhrases = this.randomPhrase[random];
+    return random;
+    };
+
 }
 // createPhrases(){};
-    // startGame(){
-    //     // this.board.drawHTMLBoard();
-    //     // this.activePlayer.activeToken.drawHTMLtoken();
-    //     // this.ready = true;
-        
-    // };
+    //startGame() {};
 
-    // getRandomPhrase(){};
-
+    

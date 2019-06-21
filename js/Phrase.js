@@ -7,35 +7,31 @@
    constructor(phrase){
      this.phrase = phrase.toLowerCase();
    }
-}
-//  //createPhrases();
-//     //createPhrases = phrases();
-//     createPhrases() {};
-// addPhraseToDisplay(){
-//     //const eachLetter = ('');
-//     function startGame() {
-//         const eachLetter= document.getElementById("phrase").innerHTML = section;
-//         //const  eachLetter = "";
-//         document.getElementById("currentGuess").innerHTML = secretBlanks(secretWord)
+   addPhraseToDisplay(phrase){
+    const newPhrase = phrase.phrase;
+    const phraseArr = newPhrase.split("");
     
-//         function guesLetter(matchLetters) {
-//             for (var i = 0; i < secretWord.length; i++) {
-//                 matchLetters += ("_ ");
-//             }
-//             return matchLetters;    
-//         }
+    const ul = document.getElementsByTagName("ul");
+    
+    for (let i = 0; i < phraseArr.length; i++){
+        let li = document.createElement("li");
+        if (phraseArr[i] === " "){
+            // if space add class hide and space to the li.
+            li.innerText = `${phraseArr[i]}`;
+            li.className = `hide space`
+        } else {
+            // else not a space it will a letter
+            // add the letter in the li and add classes of hide letter and actual letter
+            li.innerText = phraseArr[i];
+            li.className = `hide letter ${phraseArr[i]}`
+
+        }
+        ul[0].appendChild(li);
+    }
 
 
+   };
 
+}
 
-
-
-
-
-
-
-
-// };
-
-// }
 
