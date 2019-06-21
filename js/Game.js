@@ -17,15 +17,16 @@ class Game {
      this.activePhrase = null; 
     }
     //Iniatilize random phrases
-    //document.getElementById("phrase").addEventListner("click", function())
     getRandomPhrase(){
     const random = this.phrases[Math.floor(Math.random() * this.phrases.length)];
     //const ranPhrases = this.randomPhrase[random];
     return random;
     };
 
+    startGame() {};
+
 }
 // createPhrases(){};
-    //startGame() {};
+ 
 
     
