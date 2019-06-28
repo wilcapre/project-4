@@ -29,27 +29,28 @@ class Game {
 
     };
 
-    handleInteraction() {
-        //document.getElementById("phrase").onclick;
-        document.addEventListener("qwerty", (e) => {
-            const key = envent.key;
-            if (key === "keyrow") {
-                return key;
-            } else {
-                return false;
-
-            }
-
-        });
+    handleInteraction(letter, phrase) {
+        if (phrase.checkLetter(letter)){
+        // show match letter and check for win
+         phrase.showMatchedLetter(letter)
+         if (this.checkForWin()) {
+            this.gameOver(true);
+         }
+        } else {
+        // remove life
+        
+        }
+        
     
     }
 // Check if the player has revealed all of the letters in the active phrase.
 
    checkForWin() {
-        showLettets = function (letter, index) {
-            if (index < phrases.length) {
-                this.append(letter[index ++]);
-            }
+       const hiddenLetters = document.getElementsByClassName("letter hide")
+        if (hiddenLetters.length === 0 ){
+            return true;
+        } else {
+            return false;
         }
    };
 
@@ -60,13 +61,18 @@ class Game {
    };
 
    gameOver(gameWon)  {
-    function on() {
-        document.getElementById("overlay").style.display = "block";
-      }
-      
-      function off() {
-        document.getElementById("overlay").style.display = "none";
-      }
+    document.getElementById("overlay").style.display = "block";
+    document.getElementById("btn__reset").style.display = "none";
+    const message = document.getElementById("game-over-message");
+       if ( true){
+           message.innerText = "congrats";
+            // player won
+
+       } else {
+           // player lost
+           message.innerText = "sorry you lose";
+        }
+
 
    };
 }

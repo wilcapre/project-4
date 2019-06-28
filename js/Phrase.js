@@ -47,7 +47,11 @@
     return contains;
    }
    showMatchedLetter(letter) {
-   document.getElementById(letter).classList.remove("hide");  
-   document.getElementById(letter).classList.add("show");
+   const letters = document.getElementsByClassName(letter); 
+   for (let i=0; i < letters.length; i++){
+     letters[i].classList.remove("hide");
+     letters[i].classList.add("show");
+   }
+   
 }
  }
