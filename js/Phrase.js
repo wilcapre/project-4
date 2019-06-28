@@ -29,9 +29,25 @@
         ul[0].appendChild(li);
     }
 
-
    };
+   handleInteraction(letter){
+    if (phrase === letter) {
+      alert("please enter the matches letter");
+    } else {
+        alert ("incorrect try again");
+    }
+    }
 
+   checkLetter(letter) {
+    console.log("the guess was:" + letter);
+    console.log("the phrase is:" + this.phrase)
+
+    var contains = this.phrase.includes(letter)
+    console.log("includes " + contains)
+    return contains;
+   }
+   showMatchedLetter(letter) {
+   document.getElementById(letter).classList.remove("hide");  
+   document.getElementById(letter).classList.add("show");
 }
-
-
+ }
