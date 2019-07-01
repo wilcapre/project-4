@@ -38,7 +38,8 @@ class Game {
          }
         } else {
         // remove life
-        
+        this.removeLife();
+        return false;
         }
         
     
