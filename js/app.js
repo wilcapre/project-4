@@ -11,6 +11,8 @@ const game = new Game();
 // const overlay = document.getElementById('overlay');
 //  overlay.style.display = 'none';
 
+// add event for Phrase Hunter game to show
+
 document.getElementById('btn__reset').addEventListener('click', function(){
   clearDisplay();
 });
@@ -23,14 +25,15 @@ for (let i = 0; i < key.length; i++) {
 }
 
 function clearDisplay() {
-  document.querySelector('#overlay').style.visibility = 'hidden';
+  // document.querySelector('#overlay').style.visibility = 'hidden';
+  document.getElementById("overlay").style.display = "none";
   overlay.classList.remove('start');
   game.startGame();
 }
 
 function pressButton(){
   event.target.disabled = true;
-  event.classList.add('chosen')
+  event.target.classList.add('chosen');
   game.handleInteraction(event.target);
 };
 
