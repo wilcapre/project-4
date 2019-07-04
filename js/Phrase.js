@@ -34,9 +34,9 @@
    // will check for matches letter
    handleInteraction(letter){
     if (phrase === letter) {
-      alert("please enter the matches letter");
+      alert("please enter the matching letter");
     } else {
-        alert ("incorrect try again");
+        alert ("incorrect, try again");
     }
     }
 

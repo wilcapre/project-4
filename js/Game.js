@@ -35,17 +35,66 @@ class Game {
     //document.getElementById("reset").onclick = function() {
         //document.getElementById("startGame").innerHTML = "";
      //};
+    // remove li elment
+        var list = document.getElementById("ul");
+       // list.removeChild(list.childNodes[0]); 
 
-        reset.addEventListener("click", btn__reset);
+        for( let i=0; i < btn__reset.length; i++) {
+            btn__reset[i].addEventListener('ul', function(){
+               list.parentNode.removeChild(this);
+            });
+         }
+
+        //reset.addEventListener("click", btn__reset);
         function btn__reset () {
-            if (btn__reset === "startGame") {
-                btn__reset = "reset button";
+            if (btn__reset == "startGame") {
+                btn__reset == "reset button";
 
             } else {
-                btn__reset === "startGame";
+                btn__reset == "startGame";
             }
          };
+
+    //reset all heart lives
+    this.missed = 0;
+      //document.querySelector('#btn__reset').style.display = 'block';
+
+    //   const ul = document.querySelector('#phrase ul');
+    //   const totalLis = ul.childElementCount;
+    //   for (let i = 0; i < totalLis; i++) {
+    //       ul.removeChild(ul.firstElementChild);
+    //   }
+
+    // const ul = document.querySelector('#phrase ul');
+    // const totalLis = ul.childElementCount;
+    // for (let i = 0; i < totalLis; i++) {
+    //     ul.removeChild(ul.firstElementChild);
+    // }
+    // const phraseCont = document.getElementById('phrase');
+    // const keyboard = document.getElementsByClassName('key');
+    // //startButton.innerText = "Reset"; //Changes start button to say 'reset'
+    // phraseCont.innerHTML = '<ul></ul>'; //Removes phrase from display
+    // for (let i = 0; i < keyboard.length; i++) { //resets onscreen keyboard
+    //   keyboard[i].className = 'key';
+    //   keyboard[i].removeAttribute('disabled');
+    // }
+
+    const heartLivesReset = Array.from(document.querySelectorAll('.tries'));
+    heartLivesReset
+        .filter(item =>  !item.children[0].src.includes('liveHeart.png'))
+        .map(item => item.children[0].src = item.children[0].src.replace('lostHeart.png','liveHeart.png'));
+    
+        const displayKeyboardReset = Array.from(document.querySelectorAll('#qwerty button'));
+        displayKeyboardReset
+            .filter(item => item.className !== 'key')
+            .map(item => {
+                item.className = 'key';
+                item.disabled = false;
+                });
+
+
     };
+
     // this will handle check win, game over and remove life
     handleInteraction(button) {
         var phrase = this.activePhrase;
