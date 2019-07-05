@@ -13,6 +13,7 @@
     const phraseArr = newPhrase.split("");
     
     const ul = document.getElementsByTagName("ul");
+    ul.innerHTML = "";
     
     for (let i = 0; i < phraseArr.length; i++){
         let li = document.createElement("li");
