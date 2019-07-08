@@ -26,6 +26,8 @@ class Game {
 
     startGame() {
         const begin = (overlay);
+        const ul = document.querySelector('#phrase ul');
+        ul.innerHTML = "";
         this.activePhrase = this.getRandomPhrase();
         this.activePhrase.addPhraseToDisplay();
 
